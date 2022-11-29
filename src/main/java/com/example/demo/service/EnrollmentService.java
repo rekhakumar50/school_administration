@@ -114,12 +114,23 @@ public class EnrollmentService {
 	};
 	
 	
-	
+	/**
+	 * Get Registered students of the Teacher 
+	 * @param student
+	 * @param teacher
+	 * @return
+	 */
 	private Enrollment getStudentTeacherDetailsRegistered(Student student, Teacher teacher) {
 		return enrollmentRepository.findByTeacherAndStudentAndStatusEquals(teacher, student, REGISTERED);
 	}
 	
 	
+	/**
+	 * Get de-registered students of the Teacher 
+	 * @param student
+	 * @param teacher
+	 * @return
+	 */
 	private Enrollment getStudentTeacherDetailsDeregistered(Student student, Teacher teacher) {
 		return enrollmentRepository.findByTeacherAndStudentAndStatusEquals(teacher, student, DEREGISTERED);
 	}
