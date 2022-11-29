@@ -3,11 +3,11 @@
 	* Create DB in MySQL: "create database school_administration;"
 	* update userName and password of DB in application.properties which is in project resource classpath
 	* To Run From IDE:  
-      		- Go to com.example.demo.SchoolAdministrationApplication.class and run as Java Application
+      		* Go to com.example.demo.SchoolAdministrationApplication.class and run as Java Application
 	* To start application from Maven: 
-     		- After cloning the repo, go to the project folder 
-     		- run "mvn install" to build the application 
-     		- once build is success, go to the target folder of the project and run the command "java -jar school_administration-0.0.1-SNAPSHOT.jar"
+     		* After cloning the repo, go to the project folder 
+     		* run "mvn install" to build the application 
+     		* once build is success, go to the target folder of the project and run the command "java -jar school_administration-0.0.1-SNAPSHOT.jar"
 2. Used MySQL as the database
 3. Added logs for each trations using Logger
 4. Used Exception Handling for Errors
