@@ -11,7 +11,7 @@
 4. Used Exception Handling for Errors
 5. Implemented secondary level Cache (EhCache has been used)
 6. Covered Junit for Controller, Service and Repository classes
-7. attached postman collections for the API's in Mail
+7. Attached postman collections for the API's in Mail
 
 
 DB Design (Entity Relationship Diagram – ERD):
