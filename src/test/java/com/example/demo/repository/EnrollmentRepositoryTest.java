@@ -23,17 +23,25 @@ public class EnrollmentRepositoryTest {
 	@Autowired
 	private EnrollmentRepository enrollmentRepository;
 	
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	@Autowired
+	private TeacherRepository teacherRepository;
+	
 	
 	@Test
 	public void testSaveEnrollment() {
 		Student student = new Student();
 		student.setStudentEmail("studenthon@gmail.com");
 		student.setName("hon");
-		
+		studentRepository.save(student);
+
 		Teacher teacher = new Teacher();
 		teacher.setTeacherEmail("teacherjoe@gmail.com");
 		teacher.setName("joe");
-		
+		teacherRepository.save(teacher);
+
 		Enrollment enrollment = new Enrollment();
 		enrollment.setTeacher(teacher);
 		enrollment.setStudent(student);
@@ -49,15 +57,18 @@ public class EnrollmentRepositoryTest {
 		Student student1 = new Student();
 		student1.setStudentEmail("studenthon@gmail.com");
 		student1.setName("hon");
+		studentRepository.save(student1);
 		
 		Student student2 = new Student();
 		student2.setStudentEmail("studentjon@gmail.com");
 		student2.setName("jon");
-		
+		studentRepository.save(student2);
+
 		Teacher teacher = new Teacher();
 		teacher.setTeacherEmail("teacherjoe@gmail.com");
 		teacher.setName("joe");
-		
+		teacherRepository.save(teacher);
+
 		Enrollment enrollment1 = new Enrollment();
 		enrollment1.setTeacher(teacher);
 		enrollment1.setStudent(student1);

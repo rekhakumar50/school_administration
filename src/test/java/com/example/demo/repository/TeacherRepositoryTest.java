@@ -58,6 +58,11 @@ public class TeacherRepositoryTest {
 	
 	@Test
 	public void testFindAllTeacherEmail() {
+		Teacher teacher = new Teacher();
+		teacher.setTeacherEmail("teacherken@gmail.com");
+		teacher.setName("ken");
+		teacherRepository.save(teacher);
+		
 		List<String> teacherEmails = teacherRepository.findAllTeacherEmail();
 		assertThat(teacherEmails).isNotNull();
 		assertThat(teacherEmails.contains("teacherken@gmail.com")).isTrue();

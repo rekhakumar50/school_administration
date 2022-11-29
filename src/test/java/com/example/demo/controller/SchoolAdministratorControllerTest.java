@@ -105,6 +105,7 @@ public class SchoolAdministratorControllerTest {
 	public void testGetcommonstudentsForTeachers() {
 		when(requestValidation.validateEmailList(any())).thenReturn(true);
 		when(teacherService.getcommonstudentsForTeachers(any())).thenReturn(new Response());
+		when(teacherService.existsByEmails(any())).thenReturn(true);
 
 		ResponseEntity<Response> responseEntity = schoolAdministratorController.getcommonstudentsForTeachers(Arrays.asList("studentken@gmail.com"));
 		assertThat(responseEntity.getStatusCodeValue()).isEqualTo(200);
